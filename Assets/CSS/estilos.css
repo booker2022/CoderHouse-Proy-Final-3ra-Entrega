@@ -127,6 +127,7 @@ fieldset{
 }
 
 #grid__historia{
+/*
     display: grid;
     grid-template-areas: 
     "header header"
@@ -137,6 +138,19 @@ fieldset{
     grid-template-rows: 8rem 1fr 1fr 1fr 10rem;
     grid-template-columns: 1fr 1fr;
     width: 100%;
+    height: 100vh;
+*/
+
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "foto__articulo1"
+    "foto__articulo2"
+    "imagenesh"
+    "footer";
+    grid-template-rows: 8rem 1fr 1fr 1fr 10rem;
+/*    grid-template-columns: 1fr 1fr;
+*/    width: 100%;
     height: 100vh;
 
 }
@@ -203,8 +217,8 @@ html, body{
 
 .img__margenes {
     margin: 1rem;
-    width: 45rem;
-    height: 30rem;
+    height: 100hv;
+    width: 100%;
     border-style: solid;
     transition: height 0.4s;
    
@@ -232,8 +246,8 @@ html, body{
 
 .img__margenesNSL {
     margin: 1rem;
-    width: 30rem;
-    height: 50rem;
+    width: 100%;
+    height: 100hv;
     border-style: solid;
     transition: width 0.3s;    
 }
@@ -243,20 +257,20 @@ html, body{
 }
 
 .img__radio1{
-    width: 31.25rem;
+    width: 95%;
     margin: 3.12rem;
-    margin-left: 5.12rem;
-    border-radius: 15%;
+    margin-left: 1rem;
+    border-radius: 5%;
     border-style: solid;
     grid-area: foto__articulo1;
 }
 
 .img__radio2{
-    width: 31.25rem;
-    height: 25.62rem;
+    width: 55%;
+    height: 32.62rem;
     margin: 3.12rem;
-    margin-left: 9.12rem;
-    border-radius: 15%;
+    margin-left: 12.12rem;
+    border-radius: 5%;
     border-style: solid;
     grid-area: foto__articulo2;
 }
@@ -290,6 +304,7 @@ html, body{
     color: #beee42;
 }
 
+/*
 .p__angosto1{
     width: 31.25rem; 
     border-style: solid;
@@ -313,6 +328,7 @@ html, body{
     line-height: 1.56rem;
     grid-area: parrafo2;
 }
+*/
 
 .p__aside{
     font-style: arial;
@@ -323,7 +339,7 @@ html, body{
 
 .p__razo{
     font-style: arial;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .razo{
@@ -340,6 +356,40 @@ html, body{
     display: none;
     grid-area: texto;
 }
+
+
+.footer__txt1 {
+    left: 65px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .7rem;
+    margin: .2rem;
+    width: 7rem
+}
+
+.footer__txt2 {
+    left: 280px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .7rem;
+    margin: .2rem;
+    width: 8rem
+}
+
+.footer__txt3 {
+    right: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .7rem;
+    margin: .2rem;
+    width: 5rem
+}
+
+.p__angosto1{
+    display: none;
+}
+
+.p__angosto2{
+    display: none;
+}
+
 
 @media screen and (min-width: 992px){
 
@@ -362,6 +412,30 @@ html, body{
         grid-template-columns: 1fr 1fr 18.75rem;
     }
 
+    .img__radio1{
+        width: 31.25rem;
+        margin: 3.12rem;
+        margin-left: 5.12rem;
+        border-radius: 5%;
+        border-style: solid;
+        grid-area: foto__articulo1;
+    }
+    
+    .img__radio2{
+        width: 31.25rem;
+        height: 25.62rem;
+        margin: 3.12rem;
+        margin-left: 9.12rem;
+        border-radius: 5%;
+        border-style: solid;
+        grid-area: foto__articulo2;
+    }
+    
+
+    .p__razo{
+        font-size: 2.5rem;
+    }
+    
     .h1__inicio{
         visibility: visible;
     }
@@ -392,7 +466,32 @@ html, body{
         font-size: 1.25rem;
         margin: .9375rem;
         width: 185px;
+    }
 
+    .p__angosto1{
+        display: block;
+        width: 31.25rem; 
+        border-style: solid;
+        margin: 3.12rem;
+        margin-left: 9.37rem;
+        padding: 2.62rem;
+        font-style: italic;
+        font-size: 1rem;
+        line-height: 1.56rem;
+        grid-area: parrafo1;
+    }
+
+    .p__angosto2{
+        display: block;
+        width: 31.25rem; 
+        border-style: solid;
+        margin: 3.12rem;
+        margin-left: 5.12rem;
+        padding: 2.62rem;
+        font-style: italic;
+        font-size: 1rem;
+        line-height: 1.56rem;
+        grid-area: parrafo2;
     }
 }
 
